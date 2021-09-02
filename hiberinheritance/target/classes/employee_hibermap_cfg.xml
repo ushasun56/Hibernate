@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping>  
+ <class name="com.yash.collection.dummy.Question" table="quecollection">  
+   <id name="id">  
+          <generator class="increment"></generator>  
+          </id>  
+          <property name="qname"></property>  
+            
+          <list name="answers" table="anscollection">  
+     <key column="qid"></key>  
+     <index column="type"></index>  
+     <element column="answer" type="string"></element>  
+   </list>  
+ </class>  
+            
+</hibernate-mapping>  
